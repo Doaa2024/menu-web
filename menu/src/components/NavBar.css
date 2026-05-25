@@ -1,0 +1,25 @@
+.navBar {
+  text-align: center;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  font-family: "Playfair Display", serif; /* elegant restaurant feel */
+  background-color: #fcfcfc;
+}
+
+.logo {
+height: 80px;
+width: 80px;
+}
+@media (max-width: 600px) {
+  .navBar {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+

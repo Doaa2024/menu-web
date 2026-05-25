@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /c/Menu-Web && find . -name \"ChatController.php\" 2>/dev/null; echo \"---MENU SRC---\"; ls -R /c/Menu-Web/menu/src 2>/dev/null | head -60)",
+      "Read(//c/Menu-Web/**)"
+    ]
+  }
+}

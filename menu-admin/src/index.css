@@ -1,0 +1,11 @@
+#root {
+  box-sizing: border-box;
+  min-height: 100vh; 
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+html, body {
+  height: 100%;
+  margin: 0;  
+}

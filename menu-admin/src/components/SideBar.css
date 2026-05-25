@@ -1,0 +1,159 @@
+.sidebar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background:#4c9a6a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  z-index: 1000;
+  /* Modern look */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Admin title */
+.sidebarTop {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1;
+  margin-top: 16px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 18px;
+  right: 16px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.closeBtn:hover {
+  transform: rotate(180deg) scale(1.2);
+  color: #e74c3c;
+}
+
+/* Menu */
+.sidebarMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Menu items */
+.sidebarItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.25s;
+  position: relative;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.sidebarItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid white;
+}
+
+/* Active page */
+.sidebarItem.active {
+  background: white;
+  color: #25d366;
+  font-weight: 500;
+  border-radius: 10px;
+  margin: 6px 10px;
+}
+.sidebarItem.active::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid white;
+}
+.sidebarItem.active:hover {
+  transform: scale(1.01);
+  border-left: none;
+}
+
+.sidebarBottom{
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 12px 3px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+/* Bottom logout */
+.logoutAdmin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -8px;
+  margin-top: 4px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background: white;
+  color: #25d366;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* Hover effect */
+.logoutAdmin:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Click effect */
+.logoutAdmin:active {
+  transform: scale(0.97);
+}
+/* Container for indicator and lines */
+.menuIndicator {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between line and text */
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+/* Lines on either side */
+.menuIndicator::before,
+.menuIndicator::after {
+  content: "";
+  flex: 1; /* fill available space */
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}

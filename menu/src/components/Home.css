@@ -1,0 +1,382 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+    background-color: #fcfcfc;
+  }
+.homeImage {
+    width: 100%;
+    border-radius: 20px;
+}
+.embla {
+  overflow: hidden;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+  width: 100%;
+  gap: 0px;
+}
+
+.circle-item {
+  width: 90%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  /* 🔥 important: remove solid background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; /* 👈 move text to bottom */
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.circle-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+.circle-item span {
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 600;
+  z-index: 2;
+}
+.circle-item span{
+  transition: transform 0.3s ease;
+}
+
+.circle-item:hover span{
+ transform: scale(1.1);
+}
+.circle-item:active {
+  transform: scale(0.98);
+}
+.embla__slide {
+  flex: 0 0 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subcategories-bar {
+  width: 100%;
+  margin-top: 28px;
+  padding: 16px;
+  background:  #eaf3ed;
+  border-radius: 15px;
+  border: 1px solid #dde5df;
+}
+.sub-embla {
+  overflow: hidden;
+  width: 100%;
+}
+
+.sub-embla__container {
+  display: flex;
+  gap:15px;
+}
+
+.sub-embla__slide {
+  flex: 0 0 auto; /* important for pill scrolling */
+  display: flex;
+  justify-content: center;
+}
+.sub-btn {
+  padding: 14px 16px;
+  border-radius: 20px;
+  border: 1px solid #a0bbad;
+  background: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #1e1e1e;
+  transition: 0.25s ease;
+}
+
+.sub-btn:hover {
+  border-color: #4c9a6a;
+  color: #2f6f4e;
+  background: #f4f8f5;
+}
+
+.sub-btn:active {
+  transform: scale(0.95);
+}
+
+/* ACTIVE STATE */
+.sub-btn.active {
+  background: #2f6f4e;
+  color: #ffffff;
+  border-color: #2f6f4e;
+}
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.titleSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.category-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  color: #2f6f4e;
+}
+.titleSection::after{
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+    background: #2f6f4e;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Mobile → full width */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   CARD DESIGN
+========================= */
+
+.menu-item {
+  display: flex;
+  gap: 12px;
+  background: #fff;
+  border-radius: 15px;
+  height: 110px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: 0.25s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   IMAGE (LEFT)
+========================= */
+
+.menu-item img {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.menu-item img:hover {
+  transform: scale(1.035);
+}
+
+/* =========================
+   INFO (RIGHT SIDE)
+========================= */
+
+.menu-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding: 12px;
+  overflow: hidden;
+  gap:0px;
+}
+
+/* Title */
+.menu-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Description (max 2 lines) */
+.menu-info p {
+  font-size: 13px;
+  color: #555;
+  margin: 5px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* =========================
+   BOTTOM ROW
+========================= */
+
+.menu-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Price */
+.price {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 33.33%;
+  }
+  .circle-item {
+    width: 92%;
+    font-size: 0.9rem;
+  }
+  .circle-item span {
+    font-size: 1rem;
+  }
+   .circle-item:hover span {
+    transform: scale(1.1);
+  }
+}
+.modalItem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65); /* soft dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background: #ffffff;
+  color: #000;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: fadeInScale 0.3s ease;
+  transition: all 0.2s;
+}
+
+.modalContent:hover{
+ transform: translateY(-5px);
+}
+
+/* Smooth animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modalContent img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+.modalContent img:hover {
+  transform: scale(1.02);
+}
+.modalContent h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.modalContent p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.priceModal {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 2px solid #eee;
+  padding-top: 0.7rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -1px;
+  right: 8px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+  transition: 0.2s;
+}
+
+.closeBtn:hover {
+  transform: scale(1.05);
+  color: #888;
+}
+.menu-state {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 30px;
+  color: #6b8073;
+  font-size: 16px;
+  font-weight: 500;
+}
+.menu-state--error {
+  color: #b3261e;
+}
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #6b8073;
+  font-size: 16px;
+  font-weight: 500;
+  background: #eaf3ed;
+  border: 1px dashed #a0bbad;
+  border-radius: 15px;
+}

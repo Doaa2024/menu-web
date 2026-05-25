@@ -1,0 +1,33 @@
+# Root safety-net ignores for the whole project.
+# Each sub-project (manu-backend, menu, menu-admin) also has its own .gitignore.
+
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Environment files — NEVER commit secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Build / compiled output
+**/dist/
+**/dist-ssr/
+**/build/
+**/public/build/
+**/public/hot/
+**/public/storage/
+
+# Laravel local database & caches
+**/database/*.sqlite
+**/storage/*.key
+**/bootstrap/cache/*.php
+
+# Logs
+**/*.log
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

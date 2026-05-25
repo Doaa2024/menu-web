@@ -1,0 +1,58 @@
+.navbar {
+  background-color: #4c9a6a;
+  padding: 1.1rem 1.35rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid ;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+ border-radius: 0px 0px 10px 10px;
+ border: none;
+}
+.sideBar {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 12px;
+  background: white;
+  border: 1px solid #25d366;
+  color: #25d366;
+  cursor: pointer;
+  font-size: 18px;
+}
+.sideBar:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+/* tap feedback for mobile */
+.sideBar:active {
+  transform: scale(0.96);
+}
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  background:white;
+  border: 1px solid #25d366;
+  color: #25d366;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(6px);
+  font-family: 'Poppins', sans-serif;
+}
+.logout:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+.logout:active {
+  transform: scale(0.96);
+}
