@@ -68,9 +68,15 @@ public function chat(Request $request)
     ];
 
     // Send to Gemini (menu goes in system_instruction so it stays out of history)
-    $response = Http::withoutVerifying()->withHeaders([
-        'Content-Type' => 'application/json',
-    ])->post(
+    $http = Http::withHeaders(['Content-Type' => 'application/json']);
+
+    // Skip SSL verification ONLY on local dev (Windows often lacks a CA bundle).
+    // In production the server has real certificates, so we verify properly.
+    if (app()->environment('local')) {
+        $http = $http->withoutVerifying();
+    }
+
+    $response = $http->post(
         "https://generativelanguage.googleapis.com/v1beta/models/{$model}:generateContent?key=" . $apiKey,
         [
             'system_instruction' => [
