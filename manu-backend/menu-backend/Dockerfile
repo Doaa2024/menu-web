@@ -1,4 +1,4 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
 
 # System deps + PHP extensions Laravel needs (pgsql for Render Postgres, plus gd/zip/etc.)
 RUN apt-get update && apt-get install -y \
