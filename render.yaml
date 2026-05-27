@@ -1,0 +1,58 @@
+# Render Blueprint: deploys the Laravel API + a Postgres database together.
+# In Render: New > Blueprint > pick this repo. It reads this file.
+databases:
+  - name: menu-db
+    databaseName: menu
+    user: menu
+    plan: free
+
+services:
+  - type: web
+    name: menu-backend
+    runtime: docker
+    repo: https://github.com/Doaa2024/menu-web
+    branch: main
+    rootDir: manu-backend/menu-backend
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /api/restaurants
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: LOG_CHANNEL
+        value: stderr
+      # Paste the base64 key from `php artisan key:generate --show` (set in dashboard).
+      - key: APP_KEY
+        sync: false
+      # Your Render URL, e.g. https://menu-backend.onrender.com (set after first deploy).
+      - key: APP_URL
+        sync: false
+      # Comma-separated deployed frontend URLs allowed by CORS.
+      - key: FRONTEND_URLS
+        sync: false
+
+      # Database — wired automatically from the menu-db Postgres above.
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        fromDatabase:
+          name: menu-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: menu-db
+          property: port
+      - key: DB_DATABASE
+        fromDatabase:
+          name: menu-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: menu-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: menu-db
+          property: password
