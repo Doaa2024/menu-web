@@ -10,6 +10,9 @@ sed -ri "s/<VirtualHost \*:[0-9]+>/<VirtualHost *:${PORT}>/" /etc/apache2/sites-
 php artisan storage:link || true
 php artisan migrate --force
 
+# Import the original menu data on first boot (no-op once data exists).
+php artisan db:seed --class=ProductionDataSeeder --force
+
 # Cache config/routes for performance (safe to ignore if nothing to cache).
 php artisan config:cache
 php artisan route:cache

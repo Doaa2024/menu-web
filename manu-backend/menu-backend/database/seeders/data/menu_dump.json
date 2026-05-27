@@ -1,0 +1,362 @@
+{
+    "restaurants": [
+        {
+            "id": 1,
+            "name": "Savor",
+            "address": "Sidon, Lebanon",
+            "phone": "+96170123456",
+            "logo": null,
+            "cover_image": null,
+            "instagram": "https://instagram.com/myrestaurant",
+            "whatsapp": "https://wa.me/96170123456",
+            "created_at": "2026-05-21 11:47:02",
+            "updated_at": "2026-05-21 11:47:02"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "Burgers",
+            "image": "categories/burgers.webp",
+            "created_at": "2026-05-21 11:53:05",
+            "updated_at": "2026-05-21 11:53:05"
+        },
+        {
+            "id": 2,
+            "name": "Pizza",
+            "image": "categories/pizza.jpg",
+            "created_at": "2026-05-21 11:53:05",
+            "updated_at": "2026-05-21 11:53:05"
+        },
+        {
+            "id": 3,
+            "name": "Drinks",
+            "image": "categories/drinks.jpg",
+            "created_at": "2026-05-21 11:53:05",
+            "updated_at": "2026-05-21 11:53:05"
+        },
+        {
+            "id": 4,
+            "name": "Desserts",
+            "image": "categories/desserts.jpg",
+            "created_at": "2026-05-21 11:53:05",
+            "updated_at": "2026-05-21 11:53:05"
+        },
+        {
+            "id": 5,
+            "name": "Pasta",
+            "image": "categories/pasta.jpg",
+            "created_at": "2026-05-21 11:53:05",
+            "updated_at": "2026-05-21 11:53:05"
+        }
+    ],
+    "subcategories": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "name": "Beef Burgers",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 2,
+            "category_id": 1,
+            "name": "Chicken Burgers",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 3,
+            "category_id": 1,
+            "name": "Special Burgers",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 4,
+            "category_id": 2,
+            "name": "Classic Pizza",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 5,
+            "category_id": 2,
+            "name": "Cheese Pizza",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 6,
+            "category_id": 2,
+            "name": "Seafood Pizza",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 7,
+            "category_id": 3,
+            "name": "Soft Drinks",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 8,
+            "category_id": 3,
+            "name": "Fresh Juices",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 9,
+            "category_id": 3,
+            "name": "Hot Drinks",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 10,
+            "category_id": 4,
+            "name": "Cakes",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 11,
+            "category_id": 4,
+            "name": "Ice Cream",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 12,
+            "category_id": 4,
+            "name": "Pastries",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 13,
+            "category_id": 5,
+            "name": "Creamy Pasta",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 14,
+            "category_id": 5,
+            "name": "Tomato Pasta",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        },
+        {
+            "id": 15,
+            "category_id": 5,
+            "name": "Seafood Pasta",
+            "created_at": "2026-05-21 11:54:12",
+            "updated_at": "2026-05-21 11:54:12"
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "subcategory_id": 1,
+            "name": "Classic Beef Burger",
+            "description": "Beef, cheese, lettuce, tomato",
+            "price": "5.50",
+            "image": "products/beef1.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 2,
+            "subcategory_id": 1,
+            "name": "Double Beef Burger",
+            "description": "Double beef patty with cheese",
+            "price": "7.00",
+            "image": "products/beef2.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 3,
+            "subcategory_id": 1,
+            "name": "BBQ Burger",
+            "description": "Smoky BBQ sauce burger",
+            "price": "6.50",
+            "image": "products/beef3.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 4,
+            "subcategory_id": 2,
+            "name": "Crispy Chicken Burger",
+            "description": "Crunchy chicken fillet",
+            "price": "5.00",
+            "image": "products/beef1.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 5,
+            "subcategory_id": 2,
+            "name": "Spicy Chicken Burger",
+            "description": "Hot spicy chicken burger",
+            "price": "5.50",
+            "image": "products/beef1.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 6,
+            "subcategory_id": 4,
+            "name": "Margherita",
+            "description": "Tomato, mozzarella, basil",
+            "price": "6.00",
+            "image": "products/pizza.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 7,
+            "subcategory_id": 4,
+            "name": "Pepperoni",
+            "description": "Cheese and pepperoni",
+            "price": "7.50",
+            "image": "products/pizza.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 8,
+            "subcategory_id": 5,
+            "name": "Four Cheese Pizza",
+            "description": "Mozzarella, cheddar, parmesan, blue cheese",
+            "price": "8.00",
+            "image": "products/pizza.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 9,
+            "subcategory_id": 7,
+            "name": "Coca Cola",
+            "description": "Cold drink 330ml",
+            "price": "1.50",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 10,
+            "subcategory_id": 7,
+            "name": "Sprite",
+            "description": "Lemon soda",
+            "price": "1.50",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 11,
+            "subcategory_id": 8,
+            "name": "Orange Juice",
+            "description": "Fresh orange juice",
+            "price": "2.50",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 12,
+            "subcategory_id": 8,
+            "name": "Mango Juice",
+            "description": "Fresh mango juice",
+            "price": "3.00",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 13,
+            "subcategory_id": 9,
+            "name": "Espresso",
+            "description": "Strong coffee shot",
+            "price": "1.20",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 14,
+            "subcategory_id": 9,
+            "name": "Cappuccino",
+            "description": "Coffee with milk foam",
+            "price": "2.00",
+            "image": "products/drinks.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 15,
+            "subcategory_id": 10,
+            "name": "Chocolate Cake",
+            "description": "Rich chocolate cake",
+            "price": "3.50",
+            "image": "products/dessert.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 16,
+            "subcategory_id": 10,
+            "name": "Cheesecake",
+            "description": "Creamy cheesecake",
+            "price": "4.00",
+            "image": "products/dessert.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 17,
+            "subcategory_id": 11,
+            "name": "Vanilla Ice Cream",
+            "description": "Classic vanilla scoop",
+            "price": "2.00",
+            "image": "products/dessert.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 18,
+            "subcategory_id": 11,
+            "name": "Chocolate Ice Cream",
+            "description": "Rich chocolate flavor",
+            "price": "2.50",
+            "image": "products/dessert.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 19,
+            "subcategory_id": 13,
+            "name": "Chicken Alfredo",
+            "description": "Creamy Alfredo pasta with chicken",
+            "price": "6.50",
+            "image": "products/pasta.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        },
+        {
+            "id": 20,
+            "subcategory_id": 13,
+            "name": "Mushroom Pasta",
+            "description": "Creamy mushroom sauce pasta",
+            "price": "6.00",
+            "image": "products/pasta.jpg",
+            "created_at": "2026-05-21 11:57:16",
+            "updated_at": "2026-05-21 11:57:16"
+        }
+    ]
+}
