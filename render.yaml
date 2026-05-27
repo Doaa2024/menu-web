@@ -32,6 +32,11 @@ services:
       # Comma-separated deployed frontend URLs allowed by CORS.
       - key: FRONTEND_URLS
         sync: false
+      # Google Gemini key for the AI chatbot. Get one at https://aistudio.google.com/apikey
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
 
       # Database — wired automatically from the menu-db Postgres above.
       - key: DB_CONNECTION
