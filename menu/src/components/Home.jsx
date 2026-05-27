@@ -4,8 +4,7 @@ import homeImage from '../assets/homeHero.png'
 import useEmblaCarousel from 'embla-carousel-react';
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-
-const API = "http://127.0.0.1:8000";
+import { API } from "../api";
 
 function Home() {
   const [emblaRef] = useEmblaCarousel({
