@@ -71,8 +71,8 @@ function Footer() {
 
         {/* Bottom */}
         <div className="footer-bottom">
-          <p>Developed by Omega Software</p>
-          <p>© 2020–2024 All rights reserved</p>
+          <p>Developed by Doaa Khashab</p>
+          <p>© 2026 All rights reserved</p>
         </div>
 
       </div>
